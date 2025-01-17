@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+package personal_data;
+
+message GetRequest {
+    string Id = 1;
+}
+
+message PersonalDataModel {
+    string Id = 1;
+    optional string Email = 2;
+    optional string FirstName = 3;
+    optional string LastName = 4;
+    int64 CreatedAt = 5;
+}
+
+service PersonalDataService {
+    rpc Get(GetRequest) returns (PersonalDataModel);
+    rpc GetAll(google.protobuf.Empty) returns (stream PersonalDataModel);
+    rpc Ping(google.protobuf.Empty) returns (google.protobuf.Empty);
+ }

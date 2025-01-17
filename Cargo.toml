@@ -1,0 +1,30 @@
+[package]
+name = "test-rest-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+service-sdk = { tag = "0.4.1", git = "https://github.com/MyJetTools/service-sdk.git", features = [
+    "postgres",
+    "grpc",
+    "macros",
+] }
+
+rest-api-wl-shared = { tag = "7.0.0", git = "https://github.com/my-prop-trading/rest-api-wl-shared.git"}
+
+tonic = { version = "*", features = ["tls", "tls-roots", "prost"] }
+tokio = { version = "*", features = ["full"] }
+async-trait = "*"
+prost = "*"
+prost-types = "*"
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+serde_yaml = "*"
+serde_repr = "*"
+serde_derive = "*"
+futures-util = "*"
+uuid = { version = "*", features = ["v4"] }
+
+[build-dependencies]
+ci-utils = { git = "https://github.com/MyJetTools/ci-utils.git", tag = "0.1.1" }
