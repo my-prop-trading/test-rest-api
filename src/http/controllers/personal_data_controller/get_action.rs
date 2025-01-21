@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
 use my_http_server::{HttpContext, HttpFailResult, HttpOkResult, HttpOutput};
-use rest_api_wl_shared::{ApiHttpResultWithData, ApiResultStatus, GetClientId};
+use rest_api_wl_shared::{ApiHttpResultWithData, ApiResultStatus};
 
 use crate::app::AppContext;
 

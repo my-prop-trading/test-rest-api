@@ -11,6 +11,7 @@ impl From<PersonalDataDto> for PersonalDataHttpModel {
             email: dto.email,
             first_name: dto.first_name,
             last_name: dto.last_name,
+            country: dto.country,
             created_at: dto.created_at.to_rfc3339(), 
         }
     }
@@ -23,6 +24,7 @@ impl From<PersonalDataUpdateHttpInputData> for PersonalDataDto {
             email: http_model.email,
             first_name: http_model.first_name,
             last_name: http_model.last_name,
+            country: http_model.country,
             created_at: DateTimeAsMicroseconds::now(), 
         }
     }

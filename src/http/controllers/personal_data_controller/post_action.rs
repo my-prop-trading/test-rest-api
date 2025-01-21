@@ -43,6 +43,7 @@ async fn handle_request(
             existing_dto.first_name = input_data.first_name.clone();
             existing_dto.last_name = input_data.last_name.clone();
             existing_dto.email = input_data.email.clone();
+            existing_dto.country = input_data.country.clone();
     
             match action.app
                 .personal_data_repo
