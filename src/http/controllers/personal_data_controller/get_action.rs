@@ -18,7 +18,7 @@ service_sdk::macros::use_my_http_server!();
     result:[
         {status_code: 200, description: "Ok response", model: "ApiHttpResultWithData<PersonalDataHttpModel>"},
     ]
-)]
+)] 
 pub struct GetAction {
     app: Arc<AppContext>,
 }
