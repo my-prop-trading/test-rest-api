@@ -17,6 +17,9 @@ pub struct PersonalDataDto {
     #[db_index(id=2, index_name: "created_at_idx", is_unique: false, order: "DESC")]
     #[sql_type("timestamp")]
     pub created_at: DateTimeAsMicroseconds,
+
+    #[db_index(id=3, index_name: "country_idx", is_unique: false, order: "ASC")]
+    pub country: Option<String>,
 }
 
 #[derive(WhereDbModel)]

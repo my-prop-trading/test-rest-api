@@ -12,6 +12,7 @@ message PersonalDataModel {
     optional string FirstName = 3;
     optional string LastName = 4;
     int64 CreatedAt = 5;
+    optional string Country = 6;
 }
 
 service PersonalDataService {

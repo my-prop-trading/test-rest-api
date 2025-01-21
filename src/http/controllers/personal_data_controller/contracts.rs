@@ -25,6 +25,9 @@ pub struct PersonalDataHttpModel {
 
     #[serde(rename = "createdAt")]
     pub created_at: String,
+
+    #[serde(rename = "country")]
+    pub country: Option<String>,
 }
 
 #[derive(Debug, MyHttpInput)]
@@ -40,4 +43,6 @@ pub struct PersonalDataUpdateHttpInputData {
 
     #[http_body(description = "User Email", validator = "validate_email_optional")]
     pub email: Option<String>,
+    #[http_body(name: "country", description: "Country")]
+    pub country: Option<String>,
 }
